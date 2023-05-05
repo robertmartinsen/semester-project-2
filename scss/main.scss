@@ -12,6 +12,10 @@ $btnColor: #F65959;
     text-decoration: none;
 }
 
+body{
+    background-color: $body;
+}
+
 .searchcontainer {
     background-color: $primary;
     color: white;
@@ -70,6 +74,22 @@ a{
     border-radius: 20px;
 }
 
+.product-container {
+    background-color: $body;
+}
+
+.username-box {
+    border-radius: 25px;
+}
+
+.listed-profile {
+    height: 60px;
+    width: 60px;
+}
+.product-img{
+    width: 600px;
+    max-height: 600px;
+}
 @media (max-width: 767.98px) { 
     .searchbar {
         width: 200px;
@@ -87,9 +107,18 @@ a{
     color: $btnColor;
 }
 
-.btnValid{
+.btnValid {
     border-radius: 10px;
     width: 100px;
     background-color: $secondary;
     color: white;
+}
+
+.bid-btn {
+    border-radius: 20px;
+}
+
+.profile-pic {
+    max-width: 125px;
+    height: 125px;
 }
