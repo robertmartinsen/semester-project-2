@@ -1,16 +1,16 @@
-import { register } from "../auth/register"
+import { register } from "/js/auth/register.js"
 
-const signupForm = document.getElementById("signup-form")
+export const signupForm = document.getElementById("signup-form")
 signupForm.addEventListener("submit", async (event) => {
   event.preventDefault()
 
-  const emailInput = document.getElementById("name-input")
+  const emailInput = document.getElementById("email-input")
   const nameInput = document.getElementById("name-input")
   const passwordInput = document.getElementById("password-input")
 
   const name = nameInput.value.trim()
   const email = emailInput.value.trim()
-  const password = emailInput.value.trim()
+  const password = passwordInput.value.trim()
 
   let isValid = true
 
@@ -27,7 +27,7 @@ signupForm.addEventListener("submit", async (event) => {
     !email.endsWith("@stud.noroff.no")
   ) {
     document.getElementById("email-error").textContent =
-      'email address has to end with "noroff.no" pr "stud.noroff.no"'
+      'email address has to end with "noroff.no" or "stud.noroff.no"'
     isValid = false
   }
 
@@ -44,7 +44,7 @@ signupForm.addEventListener("submit", async (event) => {
   try {
     await register({ name, email, password })
     signupForm.reset()
-    window.location.href = "/html/login.html"
+    window.location.href = '/html/login.html';
   } catch (error) {
     console.log(error)
   }

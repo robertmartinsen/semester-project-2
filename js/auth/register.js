@@ -1,6 +1,6 @@
-import { registerUrl } from "../endpoints/urls";
+import { registerUrl } from "../endpoints/urls.js";
 
-export async function register(userRegistration); {
+export async function register(userRegistration) {
 try {
     const response = await fetch (registerUrl, {
         method: 'POST',

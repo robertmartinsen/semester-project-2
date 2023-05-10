@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home page for unautharized users</title>
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/main.min.css" />
+  </head>
+  <body class="">
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+      <div class="container">
+        <a href="/html/auth/index.html" class="navbar-brand mb-0 h1 col-6"
+          >RM Markets</a
+        >
+        <button
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navoptions"
+          class="navbar-toggler"
+          aria-controls="navbarNav"
+          aria-controls="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navoptions"
+        >
+          <div class="navbar-nav d-flex">
+            <a href="login.html" class="nav-link active">Sign in / register</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="searchcontainer">
+      <div class="container">
+        <div class="justify-content-center d-flex pt-3">
+          <h1 class="me-sm-3">What are you looking for?</h1>
+        </div>
+        <div class="input-group justify-content-center d-flex pb-3 me-sm-3">
+          <div class="form-outline">
+            <input
+              type="search"
+              placeholder="Search the market..."
+              class="form-control searchbar"
+            />
+          </div>
+
+          <button type="button" class="btn">
+            <a>Enter</a>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container py-5 card-display">
+        <div class="row row-cols-1 row-cols-md-2 g-4 py-5">
+          <div class="col">
+            <a href="/html/product.html">
+              <div class="card">
+                <img
+                  src="/assets/michelin.png"
+                  class="card-img-top"
+                  alt="tire"
+                />
+                <div class="card-body">
+                  <h2 class="card-title d-flex justify-content-center">
+                    Michelin tire
+                  </h2>
+                  <p class="card-desc">
+                    Michelin tire is the best brand in the market. With the best
+                    grip and shorter braking distance
+                  </p>
+                </div>
+                <div class="bid-desc container pt-3">
+                  <p class="bid-price fw-bold">
+                    Current bid price: 300 credits
+                  </p>
+                  <p class="bids fw-bold">Bids: 4</p>
+                  <p class="deadline fw-bold">Deadline: 47:59:59</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col">
+            <a href="/html/product.html">
+              <div class="card">
+                <img src="/assets/wrench.png" class="card-img-top" alt="tire" />
+                <div class="card-body">
+                  <h2 class="card-title d-flex justify-content-center">
+                    Michelin tire
+                  </h2>
+                  <p class="card-desc">
+                    Michelin tire is the best brand in the market. With the best
+                    grip and shorter braking distance
+                  </p>
+                </div>
+                <div class="bid-desc container pt-3">
+                  <p class="bid-price fw-bold">
+                    Current bid price: 300 credits
+                  </p>
+                  <p class="bids fw-bold">Bids: 4</p>
+                  <p class="deadline fw-bold">Deadline: 47:59:59</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script type="module" src="/js/auth/posts/display/posts.js"></script>
+  </body>
+</html>
