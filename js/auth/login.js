@@ -1,5 +1,5 @@
 import { loginUrl } from "../endpoints/urls.js"
-import { Token } from "../storage/token.js"
+import { save } from "../storage/save.js"
 
 export async function login(userLogin) {
   try {
@@ -13,7 +13,7 @@ export async function login(userLogin) {
 
     if (response.status === 200) {
       const user = await response.json()
-      Token("accessToken", user.accessToken)
+      save("accessToken", user.accessToken)
       return user
     }
 
