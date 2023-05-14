@@ -29,7 +29,7 @@ loginForm.addEventListener("submit", async (event) => {
     try {
       const accessToken = await login({ email, password })
       if (accessToken) {
-        localStorage.setItem("accessToken", accessToken)
+        localStorage.setItem('accessToken', JSON.stringify(accessToken));
         window.location.href = "/auth/index.html"
       }
     } catch (error) {

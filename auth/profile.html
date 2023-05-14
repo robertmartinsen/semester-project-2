@@ -18,29 +18,30 @@
   </head>
   <body class="">
     <nav class="navbar navbar-expand-sm navbar-light bg-light">
-      <div class="container">
-        <a href="/auth/index.html" class="navbar-brand mb-0 h1 col-6">RM Markets</a>
-        <button type="button" data-bs-toggle="collapse" data-bs-target="#navoptions" class="navbar-toggler" aria-controls="navbarNav" aria-controls="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navoptions">
-          <div class="navbar-nav d-flex">
-            <div class="navbar-text d-flex d-sm-none justify-content-center px-2 fw-bold">My Credits: 1000</div>
-            <ul class="navbar-nav d-flex flex-sm-row">
-              <li class="nav-item d-none d-sm-block">
-                <div class="fw-bold navbar-text d-flex justify-content-center align-items-center px-2">My Credits: 1000</div>
-              </li>
-              <li class="nav-item active">
-                <a href="/auth/profile.html" class="nav-link">My profile</a>
-              </li>
-              <li class="nav-item active">
-                <a href="/html/login.html" class="nav-link" id="logout-btn">Log out</a>
-              </li>
-            </ul>
+        <div class="container">
+          <a href="/auth/index.html" class="navbar-brand mb-0 h1 col-6">RM Markets</a>
+          <button type="button" data-bs-toggle="collapse" data-bs-target="#navoptions" class="navbar-toggler" aria-controls="navbarNav" aria-controls="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navoptions">
+            <div class="navbar-nav d-flex">
+              <div class="navbar-text d-flex d-sm-none justify-content-center px-2 fw-bold" id="profile-credits-lg">My Credits: </div>
+              <ul class="navbar-nav d-flex flex-sm-row">
+                <li class="nav-item d-none d-sm-block">
+                  <div class="fw-bold navbar-text d-flex justify-content-center align-items-center px-2" id="profile-credits">My Credits: </div>
+                </li>
+                <li class="nav-item active">
+                  <a href="/auth/profile.html" class="nav-link">My profile</a>
+                </li>
+                <li class="nav-item active">
+                  <a href="/html/login.html" class="nav-link" id="logout-btn">Log out</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+      
     
     
 
@@ -67,15 +68,29 @@
     <section class="profile py-3 container">
         <div class="container col-md-9">
           <div class="row bg-white align-items-center justify-content-center rounded d-flex">
-            <div class="col-md-5 mt-5 mt-md-0" profile-pic-container>
-              <img src="/assets/profilepic.avif" class="profile-pic">
+            <div class="col-md-5 mt-5 mt-md-0">
+              <img src="" class="profile-pic" id="profile-pic">
             </div>
             <div class="col-md-5 mt-5 -mt-md-0">
-              <h1>@user</h1>
-              <p>Hello. This is users description. At one point, this will be updated</p>
+              <h1 id="username">@user</h1>
+              <p id="bio">Hello. This is users bio. At one point, You will be able to update this.</p>
               <div class="mb-3 mt-4 d-flex justify-content-end">
                 <button class="btnValid btn" id="editprofile-btn">Edit profle</button>
                 </div>
+                
+                <form id="edit-profile-form" class="d-none">
+                    <div class="col-md-12 mt-4">
+                      <label for="avatar" class="form-label fw-bold">Link to avatar</label>
+                      <input type="text" class="form-control" id="avatar">
+                    </div>
+                    <div class="col-md-12 mt-4">
+                      <label for="description" class="form-label fw-bold">Description</label>
+                      <textarea class="form-control" id="description-input" rows="5"></textarea>
+                    </div>
+                    <div class="mb-3 mt-4 d-flex justify-content-end">
+                      <button class="btnValid btn fw-bold" type="submit" id="save-btn">Save</button>
+                    </div>
+                  </form>
             </div>
           </div>
           <div class="container mt-3">
@@ -146,9 +161,10 @@
 
         
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-    <script type="module" src="/js/auth/posts/display/posts.js"></script>
-    <script type="module" src="/js/auth/listeners/logout.js"></script>
-  
-  
+    <script type="module" src="/js/auth/profile/fetchProfile.js"></script>
+    <script type="module" src="/js/auth/userauth/listeners/logout.js"></script>
+    <script type="module" src="/js/auth/profile/listeners/profile.js"> </script>
+    <script type="module" src="/js/auth/profile/display/credits.js"></script>
+
   </body>
 </html>

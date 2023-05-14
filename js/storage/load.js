@@ -1,7 +1,10 @@
-export const load = (key) => {
-    try {
-      return JSON.parse(localStorage.getItem(key))
-    } catch {
-      return null
-    }
+export const load = (value) => {
+  try {
+    return JSON.parse(localStorage.getItem(value));
+  } catch {
+    return null;
   }
+};
+
+
+

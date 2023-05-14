@@ -1,1 +1,1 @@
-export const clear = (key) => localStorage.removeItem(key)
+export const clear = (key, value) => localStorage.removeItem(key, value)
