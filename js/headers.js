@@ -9,7 +9,7 @@ export const headers = (contentType) => {
   }
 
   if (token) {
-    headers.Authorization = `Bearer ${token.accessToken}`; // Access the token value correctly
+    headers.Authorization = `Bearer ${token.accessToken}`;
   }
 
   return headers;

@@ -10,7 +10,7 @@ async function displayPosts() {
       const postElement = document.createElement("div")
       postElement.innerHTML = `
         <div class="col col-lg-11">
-          <a href="/html/product.html">
+          <a href="/auth/product.html?id=${post.id}">
             <div class="card">
               <img src="${post.media}" class="card-img-top" alt="${post.title}">
               <div class="card-body">
