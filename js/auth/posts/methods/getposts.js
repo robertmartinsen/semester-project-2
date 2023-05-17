@@ -1,5 +1,5 @@
-import { postsUrl } from "../../endpoints/urls.js"
-import { headers } from "../../headers.js"
+import { postsUrl } from "../../../endpoints/urls.js"
+import { headers } from "../../../headers.js"
 
 export async function getPosts() {
   const response = await fetch(`${postsUrl}`, { headers: headers() })
@@ -9,3 +9,8 @@ export async function getPosts() {
 
   throw new Error("Failed to fetch posts")
 }
+
+
+
+
+

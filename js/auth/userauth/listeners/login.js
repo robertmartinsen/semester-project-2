@@ -1,4 +1,4 @@
-import { login } from "../login.js"
+import { login } from "../methods/login.js"
 
 export const loginForm = document.getElementById("login-form")
 loginForm.addEventListener("submit", async (event) => {

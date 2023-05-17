@@ -1,4 +1,4 @@
-import { register } from "/js/auth/register.js"
+import { register } from "../methods/register.js"
 
 export const signupForm = document.getElementById("signup-form")
 signupForm.addEventListener("submit", async (event) => {

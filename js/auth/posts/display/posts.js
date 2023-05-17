@@ -1,13 +1,13 @@
-import { getPosts } from "../getposts.js"
+import { getPosts } from "../methods/getposts.js"
 
 async function displayPosts() {
   const posts = await getPosts()
-  const postsContainer = document.getElementById('post-container')
-  postsContainer.innerHTML = ''
+  const postsContainer = document.getElementById("post-container")
+  postsContainer.innerHTML = ""
 
   posts.forEach((post) => {
     if (post.title && post.description && post.media) {
-      const postElement = document.createElement('div')
+      const postElement = document.createElement("div")
       postElement.innerHTML = `
         <div class="col col-lg-11">
           <a href="/html/product.html">
@@ -29,7 +29,6 @@ async function displayPosts() {
       postsContainer.appendChild(postElement)
     }
   })
-  
 }
 
 displayPosts()

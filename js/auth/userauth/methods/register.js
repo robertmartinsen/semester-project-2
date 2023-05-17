@@ -1,4 +1,4 @@
-import { registerUrl } from "../../endpoints/urls.js";
+import { registerUrl } from "../../../endpoints/urls.js";
 
 export async function register(userRegistration) {
 try {

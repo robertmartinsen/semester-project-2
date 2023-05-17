@@ -1,5 +1,5 @@
-import { loginUrl } from "../../endpoints/urls.js"
-import { save } from "../../storage/save.js"
+import { loginUrl } from "../../../endpoints/urls.js"
+import { save } from "../../../storage/save.js"
 
 export async function login(userLogin) {
   try {
