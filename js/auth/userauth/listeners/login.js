@@ -1,11 +1,11 @@
 import { login } from "../methods/login.js"
 
-export const loginForm = document.getElementById("login-form")
-loginForm.addEventListener("submit", async (event) => {
+export const loginForm = document.getElementById('login-form')
+loginForm.addEventListener('submit', async (event) => {
   event.preventDefault()
 
-  const emailInput = document.getElementById("email-input")
-  const passwordInput = document.getElementById("password-input")
+  const emailInput = document.getElementById('email-input')
+  const passwordInput = document.getElementById('password-input')
 
   const email = emailInput.value.trim()
   const password = passwordInput.value.trim()
@@ -13,13 +13,13 @@ loginForm.addEventListener("submit", async (event) => {
   let isValid = true
 
   if (!email) {
-    document.getElementById("email-error").textContent = "Email is required"
+    document.getElementById('email-error').textContent = 'Email is required'
     isValid = false
   }
 
   if (!password) {
     document.getElementById("password-error").textContent =
-      "Password is required"
+      'Password is required'
     isValid = false
   }
 
@@ -31,9 +31,13 @@ loginForm.addEventListener("submit", async (event) => {
       if (accessToken) {
         localStorage.setItem('accessToken', JSON.stringify(accessToken));
         window.location.href = "/auth/index.html"
+      } else {
+        document.getElementById("login-error").textContent =
+          'Wrong email or password'
       }
     } catch (error) {
       console.log(error)
     }
   }
 })
+

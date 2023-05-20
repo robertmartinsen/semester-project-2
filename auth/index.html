@@ -50,23 +50,24 @@
           <h1 class="me-sm-3">What are you looking for?</h1>
         </div>
         <div class="input-group justify-content-center d-flex pb-3 me-sm-3">
-          <div class="form-outline">
-            <input
-              type="search"
-              placeholder="Search the market..."
-              class="form-control searchbar"
-            />
-          </div>
-
-          <button type="button" class="btn">
-            <a>Enter</a>
-          </button>
+          <form id="filter-form" class="input-group justify-content-center d-flex pb-3 me-sm-3">
+            <div class="form-outline">
+              <input
+                type="search"
+                id="search-input"
+                placeholder="Search the market..."
+                class="form-control searchbar"
+              />
+            </div>
+            <button id="search-btn" type="submit" class="btnValid btn fw-bold">Search</button>
+          </form>
+          
         </div>
       </div>
     </section>
 
     <section>
-      <div class="container py-5 card-display">
+      <div class="container card-display pt-5">
         <div class="row row-cols-1 row-cols-md-2 g-4 py-5" id="post-container">
         </div>
       </div>
@@ -77,6 +78,7 @@
     <script type="module" src="/js/auth/posts/display/posts.js"></script>
     <script type="module" src="/js/auth/profile/display/credits.js"></script>
     <script type="module" src="/js/auth/userauth/listeners/logout.js"></script>
+    <script type="module" src="/js/auth/posts/listeners/sortposts.js"></script>
   
   
   </body>

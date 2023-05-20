@@ -1,28 +1,28 @@
 import { getListingsByProfile } from "../methods/fetchprofile.js";
 import { profile } from "../state.js";
 
-window.addEventListener("load", async () => {
+window.addEventListener('load', async () => {
   const me = profile();
   if (me) {
     try {
       const listings = await getListingsByProfile(me.name);
       displayListings(listings);
     } catch (error) {
-      console.error("Failed to retrieve user listings", error);
+      console.error('Failed to retrieve user listings', error);
     }
   } else {
-    console.error("Failed to retrieve profile information");
+    console.error('Failed to retrieve profile information');
   }
 });
 
 function displayListings(listings) {
-  const listingsContainer = document.getElementById("postbyuser-container");
+  const listingsContainer = document.getElementById('postbyuser-container');
   listingsContainer.innerHTML = "";
 
   listings.forEach((listing) => {
-    const listingElement = document.createElement("div");
+    const listingElement = document.createElement('div');
     listingElement.innerHTML = `
-      <div class="row align-items-center justify-content-center rounded d-flex">
+      <div class="row align-items-center justify-content-center rounded d-flex mt-5">
         <div class="col-md-5 mt-5 mt-md-0 profile-pic-container">
           <img src="${listing.media && listing.media[0]}" class="product-pic">
         </div>
@@ -37,15 +37,8 @@ function displayListings(listings) {
             <p>Current bid price:</p>
             <p>Amount of bids: ${listing._count && listing._count.bids || 0}</p>
           </div>
-          <div class="mb-3 mt-4">
-            <h1 class="justify-content-center d-flex">Enter an amount</h1>
-            <form>
-              <div class="col-md-12">
-                <input type="text" class="form-control" id="amount">
-              </div>
-            </form>
-            <div class="justify-content-center d-flex">
-              <button class="btn mt-3" id="bid-btn">Make a bid</button>
+          <div class="mb-3">
+            <div class="justify-content-center d-flex mt-5">
             </div>
           </div>
         </div>

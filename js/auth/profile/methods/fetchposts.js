@@ -13,8 +13,6 @@ export async function saveListing(listing) {
 
     if (response.ok) {
       return responseData;
-    } else {
-      throw new Error(responseData.errors[0].message);
     }
   } catch (error) {
     console.error(error);

@@ -15,16 +15,13 @@ export async function getProfile(name) {
     const response = await fetch(`${profilesUrl}/${name}`, { headers: headers() });
     if (response.ok) {
       const profile = await response.json();
-      console.log(profile);
       return {
         ...profile,
         credits: profile.credits
       };
-    } else {
-      throw new Error(`Failed to fetch profile: ${response.status} ${response.statusText}`);
-    }
+    } 
   } catch (error) {
-    throw new Error(`Error in getProfile: ${error.message}`);
+    console.log(error)
   }
 }
 
@@ -33,11 +30,9 @@ export async function getListingsByProfile(profileName) {
     const response = await fetch(`${profilesUrl}/${profileName}/listings`, { headers: headers() });
     if (response.ok) {
       return await response.json();
-    } else {
-      throw new Error(`Failed to fetch listings: ${response.status} ${response.statusText}`);
     }
   } catch (error) {
-    throw new Error(`Error in getListingsByProfile: ${error.message}`);
+    console.log(error)
   }
 }
 

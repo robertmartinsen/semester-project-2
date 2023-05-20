@@ -1,9 +1,9 @@
-import { getPosts } from "../methods/getposts.js";
+import { getPosts } from "../auth/posts/methods/getposts.js";
 
 export async function displayPosts(tag = '', searchQuery = '') {
   const posts = await getPosts(tag, searchQuery);
   const postsContainer = document.getElementById('post-container');
-  postsContainer.innerHTML = "";
+  postsContainer.innerHTML = '';
 
   posts.forEach((post) => {
     if (isValidListing(post) && matchesSearchQuery(post, searchQuery)) {
@@ -24,7 +24,7 @@ function isValidListing(post) {
 
 function matchesSearchQuery(post, searchQuery) {
   if (!searchQuery) {
-    return true; // If search query is empty, include all posts
+    return true;
   }
 
   const postTitle = post.title.toLowerCase();
@@ -39,7 +39,7 @@ function createPostElement(post) {
   const postElement = document.createElement('div');
   postElement.innerHTML = `
     <div class="col col-lg-11">
-      <a href="/auth/product.html?id=${post.id}">
+      <a href="/html/login.html">
         <div class="card">
           <img src="${post.media}" class="card-img-top" alt="${post.title}">
           <div class="card-body">
