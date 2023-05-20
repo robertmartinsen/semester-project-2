@@ -17,7 +17,5 @@ window.addEventListener('load', async () => {
     } catch (error) {
       console.error('Failed to fetch profile information', error)
     }
-  } else {
-    console.error('Failed to fetch profile information')
   }
 })

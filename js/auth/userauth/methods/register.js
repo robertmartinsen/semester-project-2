@@ -1,23 +1,22 @@
-import { registerUrl } from "../../../endpoints/urls.js";
+import { registerUrl } from "../../../endpoints/urls.js"
 
 export async function register(userRegistration) {
-try {
-    const response = await fetch (registerUrl, {
-        method: 'POST',
-        headers : { 
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(userRegistration),
-    });
+  try {
+    const response = await fetch(registerUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(userRegistration),
+    })
 
     if (!response.ok) {
-        throw new Error('Failed to register new user')
+      throw new Error("Failed to register new user")
     }
 
     const data = await response.json()
-    return data;
-
-} catch (error) {
+    return data
+  } catch (error) {
     console.log(error)
-}
+  }
 }

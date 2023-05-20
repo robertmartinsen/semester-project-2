@@ -3,7 +3,7 @@ import { getPosts } from "../methods/getposts.js";
 export async function displayPosts(tag = '', searchQuery = '') {
   const posts = await getPosts(tag, searchQuery);
   const postsContainer = document.getElementById('post-container');
-  postsContainer.innerHTML = "";
+  postsContainer.innerHTML = '';
 
   posts.forEach((post) => {
     if (isValidListing(post) && matchesSearchQuery(post, searchQuery)) {
@@ -24,7 +24,7 @@ function isValidListing(post) {
 
 function matchesSearchQuery(post, searchQuery) {
   if (!searchQuery) {
-    return true; // If search query is empty, include all posts
+    return true;
   }
 
   const postTitle = post.title.toLowerCase();
@@ -68,7 +68,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     await displayPosts(searchQuery);
   });
 
-  // Initial display of posts
   await displayPosts();
 });
 

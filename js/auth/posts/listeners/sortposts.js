@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     await displayPosts('', searchQuery);
   });
 
-  // Initial display of posts
   await displayPosts();
 });
   

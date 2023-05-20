@@ -1,6 +1,6 @@
-import { load } from "../../storage/index.js";
+import { load } from "../../storage/load.js"
 
 export const profile = () => {
-  const loadedProfile = load("accessToken");
-  return loadedProfile;
-};
+  const loadedProfile = load("accessToken")
+  return loadedProfile
+}

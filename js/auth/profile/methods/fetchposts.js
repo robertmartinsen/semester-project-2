@@ -1,5 +1,5 @@
-import { postsUrl } from "../../../endpoints/urls.js";
-import { headers } from "../../../headers.js";
+import { postsUrl } from "../../../endpoints/urls.js"
+import { headers } from "../../../storage/headers.js"
 
 export async function saveListing(listing) {
   try {
@@ -7,19 +7,15 @@ export async function saveListing(listing) {
       method: "POST",
       body: JSON.stringify(listing),
       headers: headers("application/json"),
-    };
-    const response = await fetch(`${postsUrl}`, requestOptions);
-    const responseData = await response.json();
+    }
+    const response = await fetch(`${postsUrl}`, requestOptions)
+    const responseData = await response.json()
 
     if (response.ok) {
-      return responseData;
+      return responseData
     }
   } catch (error) {
-    console.error(error);
-    throw new Error("Failed to create the listing");
+    console.error(error)
+    throw new Error("Failed to create the listing")
   }
 }
-
-
-
-

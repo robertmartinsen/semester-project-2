@@ -11,11 +11,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     const amountInput = document.getElementById('bid-input');
     const amount = parseFloat(amountInput.value);
 
-    bidError.textContent = "";
+    bidError.textContent = '';
 
     try {
       const urlParams = new URLSearchParams(window.location.search);
-      const listingId = urlParams.get("id");
+      const listingId = urlParams.get('id');
 
       const listing = await getCurrentBid(listingId);
       const currentHighestBid = listing.highestBid || 0;

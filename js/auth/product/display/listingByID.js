@@ -4,7 +4,7 @@ async function displayListing(listingId) {
   if (listingId) {
     try {
       const listing = await getListing(listingId);
-      const listingContainer = document.getElementById("listing-container");
+      const listingContainer = document.getElementById('listing-container');
 
       const listingElement = document.createElement('div');
       listingElement.classList.add('product-box', 'py-4', 'row');

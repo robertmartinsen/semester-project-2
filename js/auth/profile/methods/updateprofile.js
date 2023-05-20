@@ -1,5 +1,5 @@
 import { profilesUrl } from "../../../endpoints/urls.js"
-import { headers } from "../../../headers.js"
+import { headers } from "../../../storage/headers.js"
 import { profile } from "../state.js"
 
 export async function updateProfileImage(avatar) {
