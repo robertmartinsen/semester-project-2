@@ -47,7 +47,7 @@ window.addEventListener('load', () => {
     if (me.avatar !== null) {
       profilePic.src = me.avatar
     } else {
-      profilePic.src = "/assets/profile.jpeg"
+      profilePic.src = "/dist/assets/profile.jpeg"
     }
     username.textContent = `@${me.name}`
     editProfileBtn.classList.toggle('d-none', !userIsAuthorized(me))

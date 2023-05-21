@@ -1,4 +1,4 @@
-import { getPosts } from "../auth/posts/methods/getposts.js"
+import { getPosts } from "../methods/getposts.js"
 
 export async function displayPosts(tag = "", searchQuery = "") {
   const posts = await getPosts(tag, searchQuery)
@@ -34,17 +34,17 @@ function createPostElement(post) {
   const postElement = document.createElement("div")
   postElement.innerHTML = `
     <div class="col col-lg-11">
-      <a href="/html/login.html">
+      <a href="/dist/auth/product.html?id=${post.id}">
         <div class="card">
           <img src="${post.media}" class="card-img-top" alt="${post.title}">
           <div class="card-body">
             <h2 class="card-title d-flex justify-content-center">${post.title}</h2>
             <p>${post.description}</p>
           </div>
-          <div class="bid-desc container pt-3">
-            <p class="bids fw-bold">Bids: ${post._count.bids}</p>
-            <p>Created: ${post.created}</p>
-            <p class="deadline fw-bold">Deadline: ${post.endsAt}</p>
+          <div class="card-desc container pt-3">
+            <p class="fw-bold">Bids: ${post._count.bids}</p>
+            <p class="fw-bold">Created: ${post.created}</p>
+            <p class="fw-bold">Deadline: ${post.endsAt}</p>
           </div>
         </div>
       </a>
@@ -63,6 +63,5 @@ document.addEventListener("DOMContentLoaded", async () => {
     await displayPosts(searchQuery)
   })
 
-  // Initial display of posts
   await displayPosts()
 })

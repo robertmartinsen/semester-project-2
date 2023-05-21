@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Listing</title>
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/dist/css/main.css" />
+  </head>
+  <body class="">
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+      <div class="container">
+        <a href="/dist/auth/index.html" class="navbar-brand mb-0 h1 col-6"
+          >RM Markets</a
+        >
+        <button
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navoptions"
+          class="navbar-toggler"
+          aria-controls="navbarNav"
+          aria-controls="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navoptions"
+        >
+          <div class="navbar-nav d-flex">
+            <div
+              class="navbar-text d-flex d-sm-none justify-content-center px-2 fw-bold"
+              id="profile-credits-lg"
+            >
+              My Credits:
+            </div>
+            <ul class="navbar-nav d-flex flex-sm-row">
+              <li class="nav-item d-none d-sm-block">
+                <div
+                  class="fw-bold navbar-text d-flex justify-content-center align-items-center px-2"
+                  id="profile-credits"
+                >
+                  My Credits:
+                </div>
+              </li>
+              <li class="nav-item active">
+                <a href="/dist/auth/profile.html" class="nav-link">My profile</a>
+              </li>
+              <li class="nav-item active">
+                <a href="/dist/html/login.html" class="nav-link" id="logout-btn"
+                  >Log out</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="pt-5 container">
+      <div id="listing-container"></div>
+      <div class="col-md-6 mt-5 mt-md-0"></div>
+    </section>
+
+    <section class="container">
+      <div class="container">
+        <div>
+          <h4 class="d-flex justify-content-center">Enter an amount</h4>
+        </div>
+        <div class="input-group justify-content-center d-flex pb-3 me-sm-3">
+          <form id="bid-form" class="bidbar">
+            <div class="form-outline">
+              <input
+                type="number"
+                class="form-control form-control-sm input-box"
+                placeholder="Enter an amount"
+                id="bid-input"
+              />
+              <div id="bid-error" class="error"></div>
+            </div>
+            <div id="bid-error" class="error"></div>
+          </form>
+        </div>
+        <div id="bid-error" class="error"></div>
+        <div class="d-flex justify-content-center pb-5">
+          <button class="bid-btn btn fw-bold" id="bid-btn">Make a bid</button>
+        </div>
+      </div>
+    </section>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="/dist/js/auth/userauth/listeners/logout.js"></script>
+    <script type="module" src="/dist/js/auth/profile/display/credits.js"></script>
+    <script type="module" src="/dist/js/auth/profile/methods/fetchposts.js"></script>
+    <script
+      type="module"
+      src="/dist/js/auth/product/display/listingByID.js"
+    ></script>
+    <script
+      type="module"
+      src="/dist/js/auth/product/bids/listeners/placeBid.js"
+    ></script>
+  </body>
+</html>

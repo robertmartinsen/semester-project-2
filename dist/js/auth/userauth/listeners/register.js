@@ -45,7 +45,7 @@ signupForm.addEventListener('submit', async (event) => {
     try {
       await register({ name, email, password })
       signupForm.reset()
-      window.location.href = "/html/login.html"
+      window.location.href = "/dist/html/login.html"
     } catch (error) {
       console.log(error)
     }
