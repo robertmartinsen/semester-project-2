@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Listing</title>
+    <title>Home</title>
     <link
       rel="stylesheet"
       href="node_modules/bootstrap/dist/css/bootstrap.min.css"
@@ -24,7 +24,7 @@
   <body class="">
     <nav class="navbar navbar-expand-sm navbar-light bg-light">
       <div class="container">
-        <a href="/auth/index.html" class="navbar-brand mb-0 h1 col-6"
+        <a href="/dist/auth/index.html" class="navbar-brand mb-0 h1 col-6"
           >RM Markets</a
         >
         <button
@@ -59,10 +59,12 @@
                 </div>
               </li>
               <li class="nav-item active">
-                <a href="/auth/profile.html" class="nav-link">My profile</a>
+                <a href="/dist/auth/profile.html" class="nav-link"
+                  >My profile</a
+                >
               </li>
               <li class="nav-item active">
-                <a href="/html/login.html" class="nav-link" id="logout-btn"
+                <a href="/dist/html/login.html" class="nav-link" id="logout-btn"
                   >Log out</a
                 >
               </li>
@@ -72,34 +74,38 @@
       </div>
     </nav>
 
-    <section class="pt-5 container">
-      <div id="listing-container"></div>
-      <div class="col-md-6 mt-5 mt-md-0"></div>
-    </section>
-
-    <section class="container">
+    <section class="searchcontainer">
       <div class="container">
-        <div>
-          <h4 class="d-flex justify-content-center">Enter an amount</h4>
+        <div class="justify-content-center d-flex pt-3">
+          <h1 class="me-sm-3">What are you looking for?</h1>
         </div>
         <div class="input-group justify-content-center d-flex pb-3 me-sm-3">
-          <form id="bid-form" class="bidbar">
+          <form
+            id="filter-form"
+            class="input-group justify-content-center d-flex pb-3 me-sm-3"
+          >
             <div class="form-outline">
               <input
-                type="number"
-                class="form-control form-control-sm input-box"
-                placeholder="Enter an amount"
-                id="bid-input"
+                type="search"
+                id="search-input"
+                placeholder="Search the market..."
+                class="form-control searchbar"
               />
-              <div id="bid-error" class="error"></div>
             </div>
-            <div id="bid-error" class="error"></div>
+            <button id="search-btn" type="submit" class="search-btn fw-bold">
+              Search
+            </button>
           </form>
         </div>
-        <div id="bid-error" class="error"></div>
-        <div class="d-flex justify-content-center pb-5">
-          <button class="bid-btn btn fw-bold" id="bid-btn">Make a bid</button>
-        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container card-display pt-5">
+        <div
+          class="row row-cols-1 row-cols-md-2 g-4 py-5"
+          id="post-container"
+        ></div>
       </div>
     </section>
 
@@ -108,16 +114,18 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
-    <script type="module" src="/js/auth/userauth/listeners/logout.js"></script>
-    <script type="module" src="/js/auth/profile/display/credits.js"></script>
-    <script type="module" src="/js/auth/profile/methods/fetchposts.js"></script>
+    <script type="module" src="/dist/js/auth/posts/display/posts.js"></script>
     <script
       type="module"
-      src="/js/auth/product/display/listingByID.js"
+      src="/dist/js/auth/profile/display/credits.js"
     ></script>
     <script
       type="module"
-      src="/js/auth/product/bids/listeners/placeBid.js"
+      src="/dist/js/auth/userauth/listeners/logout.js"
+    ></script>
+    <script
+      type="module"
+      src="/dist/js/auth/posts/listeners/sortposts.js"
     ></script>
   </body>
 </html>

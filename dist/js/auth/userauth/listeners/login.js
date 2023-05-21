@@ -30,7 +30,7 @@ loginForm.addEventListener('submit', async (event) => {
       const accessToken = await login({ email, password })
       if (accessToken) {
         localStorage.setItem('accessToken', JSON.stringify(accessToken));
-        window.location.href = "/auth/index.html"
+        window.location.href = "/dist/auth/index.html"
       } else {
         document.getElementById("login-error").textContent =
           'Wrong email or password'

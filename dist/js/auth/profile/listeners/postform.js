@@ -62,6 +62,7 @@ export async function handlePublish(event) {
 
   try {
     await saveListing(listing)
+    window.location.reload()
   } catch (error) {
     console.error('Failed to save the listing', error)
   }

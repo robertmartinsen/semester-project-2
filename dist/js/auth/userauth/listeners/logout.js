@@ -4,5 +4,5 @@ const logoutButton = document.getElementById('logout-btn');
 logoutButton.addEventListener('click', (event) => {
   event.preventDefault();
   logout();
-  window.location.href = "/html/login.html";
+  window.location.href = "/dist/html/login.html";
 });
