@@ -23,9 +23,9 @@ export function validateForm(listing) {
   } else {
     const deadline = new Date(listing.endsAt)
     if (isNaN(deadline.getTime())) {
-      errors.push("Invalid deadline date")
+      errors.push('Invalid deadline date')
     } else if (deadline < new Date()) {
-      errors.push("Deadline must be in the future")
+      errors.push('Deadline must be in the future')
     }
   }
 

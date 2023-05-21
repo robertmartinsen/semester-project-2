@@ -31,7 +31,7 @@ function matchesSearchQuery(post, searchQuery) {
 }
 
 function createPostElement(post) {
-  const postElement = document.createElement("div")
+  const postElement = document.createElement('div')
   postElement.innerHTML = `
     <div class="col col-lg-11">
       <a href="/html/login.html">
@@ -53,11 +53,11 @@ function createPostElement(post) {
   return postElement
 }
 
-document.addEventListener("DOMContentLoaded", async () => {
+document.addEventListener('DOMContentLoaded', async () => {
   const filterForm = document.getElementById("filter-form")
-  const searchInput = document.getElementById("search-input")
+  const searchInput = document.getElementById('search-input')
 
-  filterForm.addEventListener("submit", async (event) => {
+  filterForm.addEventListener('submit', async (event) => {
     event.preventDefault()
     const searchQuery = searchInput.value
     await displayPosts(searchQuery)

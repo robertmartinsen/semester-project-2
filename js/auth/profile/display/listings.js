@@ -1,7 +1,7 @@
 import { getListingsByProfile } from "../methods/fetchprofile.js"
 import { profile } from "../state.js"
 
-window.addEventListener("load", async () => {
+window.addEventListener('load', async () => {
   const me = profile()
   if (me) {
     try {

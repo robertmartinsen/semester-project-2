@@ -16,6 +16,6 @@ export async function saveListing(listing) {
     }
   } catch (error) {
     console.error(error)
-    throw new Error("Failed to create the listing")
+    throw new Error('Failed to create the listing')
   }
 }
