@@ -39,7 +39,7 @@ function createPostElement(post) {
           <img src="${post.media}" class="card-img-top" alt="${post.title}">
           <div class="card-body">
             <h2 class="card-title d-flex justify-content-center">${post.title}</h2>
-            <p class="card-desc">${post.description}</p>
+            <p>${post.description}</p>
           </div>
           <div class="bid-desc container pt-3">
             <p class="bids fw-bold">Bids: ${post._count.bids}</p>
