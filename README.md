@@ -1,6 +1,6 @@
 # Semester-project-2
 
-![image] (/assets/header.png)
+![image](/assets/header.png)
 
 ## Description
 
@@ -12,10 +12,18 @@ This a delivery for the semester project 2 for Noroff. Objective was to plan out
 - [CSS]
 - [Javascript]
 
+## Recources
+
+I took some inspiration of folder structure and how this developer stored and removed access token, headers and profile data from this repo:
+
+https://github.com/robertmartinsen/social-media-client
+
 ## Goal
+
 To take the skills learned over the past three semesters and create an auction website.
 
 ## Brief
+
 An auction site is looking to launch a website where users can add items to be bid on and bid on items other users have put up for auction.
 
 When a new user joins the website, they are given 1000 credits to use on the site. They can get credits by selling items and use credit by buying items. Non-registered users can search through the listings, but only registered users can make bids on listings.
