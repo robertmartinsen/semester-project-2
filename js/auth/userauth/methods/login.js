@@ -18,7 +18,7 @@ export async function login(userLogin) {
     }
 
     if (!response.ok) {
-      throw new Error("Failed to login user")
+      throw new Error('Failed to login user')
     }
 
     const data = await response.json()
