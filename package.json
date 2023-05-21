@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:css": "node-sass ./scss/main.scss dist/css/main.css",
-    "build": "sass ./scss:dist/css",
+    "build:css": "node-sass dist/scss/main.scss dist/css/main.css",
+    "build": "sass dist/scss:dist/css",
     "watch": "sass --watch ./scss:dist/css & live-server"
   },
   "repository": {
