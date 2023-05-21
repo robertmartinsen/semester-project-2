@@ -1,0 +1,17 @@
+
+.bidbar {
+    width: 450px;
+    max-width: 100%;
+  }
+
+@media (max-width: 767.98px) { 
+    .searchbar {
+        width: 200px;
+        max-width: 100%;
+    }
+
+    .bidbar{
+        width: 250x;
+        max-width: 100%;
+    }
+}
