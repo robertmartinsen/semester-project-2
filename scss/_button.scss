@@ -1,0 +1,31 @@
+@import "./color";
+
+
+.btn {
+  background-color: $secondary;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.btn:hover {
+  background-color: $primary;
+}
+
+.btn:hover ~ .btn {
+  background-color: $primary;
+}
+
+.bid-btn {
+  border-radius: 20px;
+}
+
+.search-btn {
+    border-radius: 5px;
+    color: white;
+    background-color: $secondary;
+    border: none;
+    padding-right: 5px;
+    padding-left: 5px;
+}
