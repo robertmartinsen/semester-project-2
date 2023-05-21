@@ -6,7 +6,7 @@
   "scripts": {
     "build:css": "node-sass dist/scss/main.scss dist/css/main.css",
     "build": "sass dist/scss:dist/css",
-    "watch": "sass --watch dist/scss:dist/css & live-server --open=./dist/html/index.html"
+    "watch": "sass --watch dist/scss:dist/css & live-server --open=./dist/index.html"
   },
   "repository": {
     "type": "git",
